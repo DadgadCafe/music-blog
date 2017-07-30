@@ -1,0 +1,50 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  line-height: 1.2;
+}
+
+.sidebar .on {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 .2rem .2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  font-size: 4rem;
+  transition: width 1s ease;
+}
+
+@media only screen and (max-height: 464px) {
+  .sidebar .on {
+    font-size: 3rem;
+  }
+}
+
+.sidebar .off {
+  border-radius: 0 .2rem .2rem 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  font-size: 2.5rem;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 3rem;
+}
+
+.sidebar .link {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sidebar .link:hover {
+  color: #fff;
+  text-shadow: 0 0 2px #fff;
+}

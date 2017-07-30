@@ -1,0 +1,47 @@
+.article {
+  font-size: 1.1rem;
+}
+
+.article .title {
+  color: #b50e0e;
+}
+
+.article article p {
+  margin-top: 0;
+}
+
+.article article .caption {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+}
+
+.article article {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.article article h1::before {
+  content: '# '
+}
+
+.article article h2::before {
+  content: '## '
+}
+
+.article article h1:hover::before, h2:hover::before {
+  opacity: 0.3;
+}
+
+.article h1 {
+  font-size: 2rem;
+  border-bottom: 1px #ddd solid;
+}
+
+.article ol, ul, dl {
+  padding-left: 0;
+  list-style: decimal inside;
+}
+
+.article .footer {
+  border-bottom: 1px #eee solid;
+}

@@ -1,0 +1,74 @@
+{
+  "name": "blog-gen",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "dadgadcafe <dadgadcafe@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "clean-md": "rm -rf ./dist/api",
+    "clean-site": "rm -rf ./dist/static ./dist/index.html",
+    "gen": "node ./gen",
+    "create-md": "node ./gen/create-md.js",
+    "build": "NODE_ENV=production webpack --config webpack.config.build.js --progress",
+    "dev": "webpack-dev-server"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ],
+      "stage-0"
+    ],
+    "plugins": [
+      "react-hot-loader/babel",
+      [
+        "transform-runtime",
+        {
+          "helpers": false,
+          "polyfill": false,
+          "regenerator": true,
+          "moduleName": "babel-runtime"
+        }
+      ],
+      "transform-decorators-legacy"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "history": "^4.6.3",
+    "js-yaml": "^3.9.0",
+    "marked": "^0.3.6",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.2",
+    "react-router-redux": "5.0.0-alpha.6",
+    "react-transition-group": "^2.2.0",
+    "redux": "^3.7.2",
+    "redux-promise": "^0.5.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.29.0",
+    "react-hot-loader": "3.0.0-beta.7",
+    "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.2.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}

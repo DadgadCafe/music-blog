@@ -1,0 +1,16 @@
+.blogs {
+
+}
+
+.blogs .blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blogs .meta {
+  margin-right: .5rem;
+}
+
+.blogs h1 {
+  margin-bottom: .5rem;
+}
