@@ -1,6 +1,6 @@
 'use strict'
 import React from 'react'
-import {Route, Redirect, Switch} from 'react-router-dom'
+import {Route, Redirect, Switch, BrowserRouter} from 'react-router-dom'
 import {ConnectedRouter} from 'react-router-redux'
 
 import {history} from '../store'
@@ -12,6 +12,7 @@ import Blog from '../components/Blog'
 
 const Router = () => (
   <ConnectedRouter history={history}>
+    <BrowserRouter basename="/music-blog">
     <App>
       <Switch>
         <Route exact path="/"/>
@@ -23,6 +24,7 @@ const Router = () => (
         <Redirect from="**" to="/"/>
       </Switch>
     </App>
+    </BrowserRouter>
   </ConnectedRouter>
 )
 

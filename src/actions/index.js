@@ -3,7 +3,7 @@ import {getJSON} from '../utils/fetch'
 
 export async function getArticle (url) {
   if (url === '/about') {
-    url = '/_static/about'
+    url = '/static/about'
   }
 
   const payload = await getJSON(`/api${url}.json`)

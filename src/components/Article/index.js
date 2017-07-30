@@ -5,8 +5,9 @@ import Article from './Article'
 import {getArticle} from '../../actions'
 
 function mapStateToProps (state, ownProps) {
+
   return {
-    pathname: state.router.location.pathname,
+    url: ownProps.url,
     article: state.page.article
   }
 }

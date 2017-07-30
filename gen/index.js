@@ -95,7 +95,7 @@ async function genJSONs (from, to, isNeeded) {
         )
         // exclude _static file
           .then(posts =>
-            fileName[0] === '_' ? [] : posts
+            fileName === 'static' ? [] : posts
           )
       )
     )

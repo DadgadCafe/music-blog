@@ -31,7 +31,7 @@ class Article extends React.Component {
   }
 
   componentDidMount () {
-    this.getArticle(this.props.pathname)
+    this.getArticle(this.props.url)
   }
 
   render () {

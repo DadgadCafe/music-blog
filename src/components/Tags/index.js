@@ -7,7 +7,8 @@ import {getTags} from '../../actions'
 function mapStateToProps (state, ownProps) {
   return {
     tags: state.page.tags,
-    pathname: state.router.location.pathname
+    tagId: ownProps.match.params.tagId,
+    url: ownProps.match.url,
   }
 }
 

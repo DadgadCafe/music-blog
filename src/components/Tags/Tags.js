@@ -36,7 +36,7 @@ class Tags extends React.Component {
   }
 
   render () {
-    const {tags, pathname} = this.props
+    const {tags, tagId, url} = this.props
 
     return (
       this.state.isLoading
@@ -61,9 +61,9 @@ class Tags extends React.Component {
             }
           </section>
           {
-            pathname.startsWith('/tag/')
+            tagId
             && <section className="selected-tag animated bounceInUp">
-              <Blogs tag={pathname}/>
+              <Blogs tag={url}/>
             </section>
           }
         </div>

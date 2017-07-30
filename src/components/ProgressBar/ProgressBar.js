@@ -10,8 +10,9 @@ class ProgressBar extends React.Component {
 
   render () {
     return (
+      // this.props.pathname seems buggy
       // force re-mount the node when url changes
-      <div key={this.props.pathname}
+      <div key={window.location.pathname}
            className="progress-bar animated slideInLeftProgress"
       />
     )

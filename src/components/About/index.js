@@ -1,4 +1,12 @@
 'use strict'
+import {connect} from 'react-redux'
+
 import About from './About'
 
-export default About
+function mapStateToProps (state, ownProps) {
+  return {
+    url: ownProps.match.url
+  }
+}
+
+export default connect(mapStateToProps)(About)

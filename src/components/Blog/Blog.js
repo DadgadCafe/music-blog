@@ -12,7 +12,7 @@ class Blog extends React.Component {
   render () {
     return (
       <div className="about">
-          <Article/>
+          <Article url={this.props.url}/>
       </div>
     )
   }
