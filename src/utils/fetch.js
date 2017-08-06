@@ -1,17 +1,10 @@
 'use strict'
-const baseURL = process.env.NODE_ENV === 'dev' ? 'http://127.0.0.1:3000' : '/music-blog'
+import axios from 'axios'
+
+axios.defaults.baseURL = process.env.NODE_ENV === 'dev'
+  ? 'http://127.0.0.1:3000' : '/music-blog'
 
 export async function getJSON (url) {
-  const req = new Request(
-    baseURL + url,
-    {
-      method: 'GET',
-      cache: 'reload'
-    }
-  )
-
-  const res = await fetch(req)
-  const data = await res.json()
-
+  const {data} = await axios.get(url)
   return data
 }

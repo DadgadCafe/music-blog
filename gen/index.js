@@ -4,6 +4,7 @@ const path = require('path')
 
 const SRC_PATH = path.join(__dirname, '../source')
 const DIST_PATH = path.join(__dirname, '../dist/api')
+const STATIC_DIR = 'static'
 
 async function genBlogs (mdJSONs, to) {
   const metas = mdJSONs.map(({meta}) => meta)
@@ -95,7 +96,7 @@ async function genJSONs (from, to, isNeeded) {
         )
         // exclude _static file
           .then(posts =>
-            fileName === 'static' ? [] : posts
+            fileName === STATIC_DIR ? [] : posts
           )
       )
     )

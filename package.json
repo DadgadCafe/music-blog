@@ -1,15 +1,15 @@
 {
   "name": "blog-gen",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "author": "dadgadcafe <dadgadcafe@gmail.com>",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf ./dist",
     "clean-md": "rm -rf ./dist/api",
-    "clean-site": "rm -rf ./dist/static ./dist/index.html",
-    "gen": "node ./gen",
+    "clean-site": "rm -rf ./dist/static ./dist/index.html ./dist/404.html",
     "create-md": "node ./gen/create-md.js",
+    "gen": "node ./gen",
     "build": "NODE_ENV=production webpack --config webpack.config.build.js --progress",
     "dev": "webpack-dev-server"
   },

@@ -10,7 +10,7 @@ module.exports = {
   output: {
     filename: 'static/js/bundle.[hash].min.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: './'
+    publicPath: '/music-blog/'
   },
 
   devtool: 'source-map',
@@ -26,7 +26,18 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index-template.html'
+      template: './index-template.html',
+      filename: './index.html',
+      minify: {
+        removeComments: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      template: './index-template.html',
+      filename: './404.html',
+      minify: {
+        removeComments: true
+      }
     }),
     new ExtractTextPlugin('static/css/style.[hash].css'),
     new webpack.DefinePlugin({
