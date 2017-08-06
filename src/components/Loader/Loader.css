@@ -1,9 +1,0 @@
-.loader {
-  display: flex;
-  justify-content: center;
-  margin-top: 5rem;
-}
-
-.loader div{
-  background-color: rgba(0, 170, 255, 0.25);
-}
